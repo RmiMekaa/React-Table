@@ -1,0 +1,41 @@
+.tableFooter {
+  background-color: #f1f1f1;
+  padding: 8px 0px;
+  width: 100%;
+  font-weight: 500;
+  text-align: left;
+  font-size: 16px;
+  color: #2c3e50;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tableFooter__btn {
+  border: transparent solid 2px;
+  padding: 7px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.tableFooter__btn--active {
+  color: white;
+  border: #04AA6D solid 2px;
+  background: #04AA6D;
+}
+
+.tableFooter__btn[disabled] {
+  cursor: initial;
+}
+
+.tableFooter__btn[disabled]:hover {
+  border: transparent 2px solid;
+}
+
+.tableFooter__btn:hover {
+  border: #04AA6D solid 2px;
+}

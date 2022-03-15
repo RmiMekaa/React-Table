@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ReactTable } from './components/ReactTable/ReactTable';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { HEADERS, HEADERS2 } from './Mock/headers';
+import { DATA, DATA2 } from './Mock/data.js';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ReactTable headers={HEADERS} data={DATA} options={[25, 50, 75, 100]} />
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
