@@ -1,6 +1,7 @@
 .tableFooter {
+  box-sizing: border-box;
   background-color: #f1f1f1;
-  padding: 8px 0px;
+  padding: 1rem;
   width: 100%;
   font-weight: 500;
   text-align: left;
@@ -9,8 +10,9 @@
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   align-items: center;
-  justify-content: center;
 }
 
 .tableFooter__btn {
@@ -38,4 +40,11 @@
 
 .tableFooter__btn:hover {
   border: #04AA6D solid 2px;
+}
+
+@media all and (min-width: 426px) {
+  .tableFooter {
+    flex-direction: row;
+    justify-content: space-between;
+  }  
 }
