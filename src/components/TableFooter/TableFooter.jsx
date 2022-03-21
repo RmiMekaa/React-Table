@@ -1,51 +1,29 @@
 import React, { useEffect } from "react";
+import { EntriesDisplayer } from "../EntriesDisplayer/EntriesDisplayer";
+import { Pagination } from "../Pagination/Pagination";
+import PropTypes from 'prop-types'
 import "./TableFooter.css";
 
-export function TableFooter({ range, setCurrentPage, currentPage, slice, orderedData, pageSize }) {
+TableFooter.propTypes = {
+  range: PropTypes.arrayOf(PropTypes.number).isRequired,
+  setCurrentPage: PropTypes.func.isRequired,
+  currentPage: PropTypes.number.isRequired,
+  slice: PropTypes.arrayOf(PropTypes.object).isRequired,
+  orderedData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  pageSize: PropTypes.number.isRequired,
+  displayEntries: PropTypes.bool,
+}
+
+export function TableFooter({ range, setCurrentPage, currentPage, slice, orderedData, pageSize, displayEntries=true }) {
 
   useEffect(() => {
-    if (slice.length < 1 && currentPage !== 1) {
-      setCurrentPage(currentPage - 1);
-    }
+    if (slice.length === 0 && currentPage !== 1) setCurrentPage(1);
   }, [slice, currentPage, setCurrentPage]);
-
-  if ((pageSize * currentPage) > orderedData.length) console.log((currentPage * pageSize)-(pageSize - slice.length));
 
   return (
     <div className="tableFooter">
-      <span>
-        Showing {currentPage === 1 ? currentPage : ((currentPage-1) * pageSize) + 1} 
-        -{((pageSize * currentPage) > orderedData.length)
-        ? (currentPage * pageSize)-(pageSize - slice.length) 
-        : (currentPage * pageSize)
-        }
-        {' '} of {orderedData.length}{' '}
-        entries
-      </span>
-
-      <button 
-        className="tableFooter__btn" 
-        disabled={currentPage === 1 ? true : false}
-        onClick={() => setCurrentPage(currentPage - 1)}
-      >
-        Previous
-      </button>
-      {range.map((pageNumber, index) => (
-        <button
-          key={index}
-          className={currentPage === pageNumber ? "tableFooter__btn tableFooter__btn--active" : 'tableFooter__btn'}
-          onClick={() => setCurrentPage(pageNumber)}
-        >
-          {pageNumber}
-        </button>
-      ))}
-      <button
-        className="tableFooter__btn"
-        disabled={currentPage === range.length ? true : false}
-        onClick={() => setCurrentPage(currentPage + 1)}
-      >
-        Next
-      </button>
+      {displayEntries && <EntriesDisplayer currentPage={currentPage} pageSize={pageSize} orderedData={orderedData} slice={slice} />}
+      {range.length > 1 && <Pagination range={range} currentPage={currentPage} setCurrentPage={setCurrentPage} />}
     </div>
   );
 };

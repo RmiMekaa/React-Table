@@ -1,6 +1,5 @@
 import React from 'react'
 import './SelectPageSize.css'
-
 import PropTypes from 'prop-types';
 
 SelectPageSize.propTypes = {
