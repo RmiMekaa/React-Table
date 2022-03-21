@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 import { TableHeader } from '../TableHeader.jsx/TableHeader';
 import { TableBody } from '../TableBody/TableBody';
@@ -33,7 +33,6 @@ export function ReactTable({ data, headers, pageSizeOptions=[25, 50, 100], displ
 
   const filteredData = useSearch(data, searchString);
   const orderedData = useOrdering(filteredData, ordering);
-  //const tableData = useMemo(() => orderedData, [orderedData]) ;
   const { slice, range } = usePagination(orderedData, currentPage, pageSize, ordering);
 
   return (

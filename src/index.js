@@ -7,7 +7,8 @@ import { DATA, DATA2 } from './Mock/data.js';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ReactTable headers={HEADERS} data={DATA} options={[25, 50, 75, 100]} />
+    <ReactTable headers={HEADERS} data={DATA} />
+    <ReactTable headers={HEADERS2} data={DATA2} selectPageSize={false} allowSearch={false} displayEntries={false} />
   </React.StrictMode>,
   document.getElementById('root')
 );
