@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import './TableHeader.css';
 
 TableHeader.propTypes = {
   headers: PropTypes.array,
@@ -26,8 +25,8 @@ export function TableHeader({ headers, ordering, setOrdering }) {
               <div className="th-content">
                 {header.name}
                 <span className='sortIcons'>
-                  <button className={(ordering && ordering.property === header.key && ordering.order === "ascending") ? "sortIcon--active" : null }>▲</button>
-                  <button className={(ordering && ordering.property === header.key && ordering.order === "descending") ? "sortIcon--active" : null }>▼</button>
+                  <button className={(ordering && ordering.property === header.key && ordering.order === "ascending") ? "sortIcon--active" : null}>▲</button>
+                  <button className={(ordering && ordering.property === header.key && ordering.order === "descending") ? "sortIcon--active" : null}>▼</button>
                 </span>
               </div>
             </th>

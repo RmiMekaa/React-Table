@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 TableBody.propTypes = {
-  data: PropTypes.array,
+  slice: PropTypes.array,
   pageSize: PropTypes.number,
   searchString: PropTypes.string,
 }
@@ -10,14 +10,14 @@ TableBody.propTypes = {
 /**
  * Table body component
  * @param {Object} props
- * @param {Object[]} props.data Data to display in the body
+ * @param {Object[]} props.slice Data to display in the body
  * @component 
  */
-export function TableBody({ data }) {
+export function TableBody({ slice }) {
   let key = 0;
   return (
     <tbody>
-      {data.map(object => {
+      {slice.map(object => {
         key++;
         return (
           <tr key={"TableRow" + key}>

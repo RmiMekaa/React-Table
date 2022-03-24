@@ -1,0 +1,145 @@
+.mainContainer {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  background-color: lightGrey;
+}
+
+/* FEATURES */
+
+.header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.header select, .header input {
+  background-color: lightGrey;
+  border-radius: 0.2rem;
+  outline: none;
+}
+.header select option {
+  background-color: lightGrey;
+}
+
+/* TABLE */
+
+.tableWrapper {
+  overflow-x: auto;
+}
+.tableWrapper table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.tableWrapper table td, .tableWrapper table th {
+  border: 2px solid #ddd;
+  padding: 0.5rem;
+}
+.tableWrapper table tr:nth-child(even) { 
+  background-color: #f2f2f2; 
+}
+.tableWrapper table tr:nth-child(odd) { 
+  background-color: #f2f2f2;
+}
+.tableWrapper table tr:hover {
+  background-color: white;
+}
+.tableWrapper table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: transparent 2px solid;
+}
+.th-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  user-select:none;
+}
+
+/* SORT ICONS */
+
+.sortIcons {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sortIcons button {
+  font-size: 0.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+  height: fit-content;
+}
+.sortIcons button:first-child {
+  position: relative;
+  top: 1px;
+}
+.sortIcons button.sortIcon--active {
+  color: white; 
+  font-size: 0.6rem;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* PAGINATION */
+
+.pagination button {
+  border: transparent solid 2px;
+  padding: 7px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+.pagination .page--active {
+  color: white;
+  border: black solid 2px;
+  background: black;
+}
+.pagination button[disabled] {
+  cursor: initial;
+}
+.pagination button[disabled]:hover {
+  border: transparent 2px solid;
+}
+.pagination button:hover {
+  border: black solid 2px;
+}
+
+/* NO DATA MESSAGE */
+
+.noDataMsg {
+  display: inline-block;
+  padding: 2rem;
+  text-align: center; 
+  width: 100%;
+}
+
+.table {
+ overflow-x: auto;
+}
+
+/*---Media Queries---*/
+
+@media all and (min-width: 426px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }  
+}

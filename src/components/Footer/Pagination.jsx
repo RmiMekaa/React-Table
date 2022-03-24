@@ -7,11 +7,10 @@ Pagination.propTypes = {
   setCurrentPage: PropTypes.func.isRequired,
 }
 
-export function Pagination({range, currentPage, setCurrentPage}) {
+export function Pagination({ range, currentPage, setCurrentPage }) {
   return (
     <div className='pagination'>
-      <button 
-        className="tableFooter__btn" 
+      <button
         disabled={currentPage === 1 ? true : false}
         onClick={() => setCurrentPage(currentPage - 1)}
       >
@@ -20,14 +19,13 @@ export function Pagination({range, currentPage, setCurrentPage}) {
       {range.map((pageNumber, index) => (
         <button
           key={index}
-          className={currentPage === pageNumber ? "tableFooter__btn tableFooter__btn--active" : 'tableFooter__btn'}
+          className={currentPage === pageNumber ? "page--active" : null}
           onClick={() => setCurrentPage(pageNumber)}
         >
           {pageNumber}
         </button>
       ))}
       <button
-        className="tableFooter__btn"
         disabled={currentPage === range.length ? true : false}
         onClick={() => setCurrentPage(currentPage + 1)}
       >

@@ -1,5 +1,4 @@
 import React from 'react'
-import './SelectPageSize.css'
 import PropTypes from 'prop-types';
 
 SelectPageSize.propTypes = {
@@ -10,12 +9,12 @@ SelectPageSize.propTypes = {
 
 export function SelectPageSize({ pageSize, setPageSize, pageSizeOptions }) {
   return (
-    <label className="selectPageSize">
+    <label>
       Show{' '}
       <select value={pageSize} onChange={(e) => setPageSize(parseInt(e.target.value))}>
         {pageSizeOptions.map(option => <option key={option}>{option}</option>)}
       </select>
-      {' '}Entries   
+      {' '}Entries
     </label>
   )
 }
