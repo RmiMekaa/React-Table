@@ -1,13 +1,15 @@
 .mainContainer {
   font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
-  background-color: lightGrey;
+  max-width: 100%;
+  background-color: rgb(60, 60, 60);
+  border-radius: 1rem;
 }
 
 /* HEADER */
 
 .header {
-  padding: 1rem;
+  color: white;
+  padding: 1.2rem 1rem 1rem 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -44,8 +46,7 @@
   background-color: white;
 }
 .tableWrapper table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 0.5rem;
   text-align: left;
   background-color: black;
   color: white;
@@ -57,7 +58,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  user-select:none;
+  user-select: none;
 }
 
 /* SORT ICONS */
@@ -90,6 +91,7 @@
 /* FOOTER */
 
 .footer {
+  color: white;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -125,10 +127,14 @@
 /* NO DATA MESSAGE */
 
 .noDataMsg {
+  box-sizing: border-box;
+  background-color: #f2f2f2;
   display: inline-block;
   padding: 2rem;
   text-align: center; 
   width: 100%;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .table {
