@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { EntriesDisplayer } from "./EntriesDisplayer";
-import { Pagination } from "./Pagination";
+import { EntriesDisplayer } from "./EntriesDisplayer.jsx";
+import { Pagination } from "./Pagination.jsx";
 import PropTypes from 'prop-types'
 
 Footer.propTypes = {

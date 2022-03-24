@@ -1,6 +1,6 @@
 import React from "react";
-import { TableHeader } from "./TableHeader";
-import { TableBody } from "./TableBody";
+import { TableHeader } from "./TableHeader.jsx";
+import { TableBody } from "./TableBody.jsx";
 
 export function Table({ headers, slice, ordering, setOrdering }) {
   return (
