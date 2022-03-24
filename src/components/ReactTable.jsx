@@ -22,10 +22,10 @@ import '../style/style.css';
 export function ReactTable({
   data,
   headers,
-  pageSizeOptions = [25, 50, 100],
-  displayEntries = true,
-  allowSearch = true,
-  selectPageSize = true,
+  pageSizeOptions,
+  displayEntries,
+  allowSearch,
+  selectPageSize,
 }) {
 
   const [ordering, setOrdering] = useState(undefined)
@@ -55,3 +55,10 @@ ReactTable.propTypes = {
   allowSearch: PropTypes.bool,
   selectPageSize: PropTypes.bool
 }
+
+ReactTable.defaultProps = {
+  pageSizeOptions: [25, 50, 100],
+  displayEntries: true,
+  allowSearch: true,
+  selectPageSize: true
+};
