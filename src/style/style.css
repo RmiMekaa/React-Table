@@ -4,7 +4,7 @@
   background-color: lightGrey;
 }
 
-/* FEATURES */
+/* HEADER */
 
 .header {
   padding: 1rem;
@@ -14,6 +14,7 @@
 .header select, .header input {
   background-color: lightGrey;
   border-radius: 0.2rem;
+  border: 1px solid black;
   outline: none;
 }
 .header select option {
@@ -49,7 +50,7 @@
   background-color: black;
   color: white;
   cursor: pointer;
-  border: transparent 2px solid;
+  border: black 2px solid;
 }
 .th-content {
   display: flex;
