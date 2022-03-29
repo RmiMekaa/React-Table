@@ -8,10 +8,12 @@ import React from 'react'
  */
 export function TableSearch({ searchString, setSearchString }) {
   return (
-    <label>
-      Search: {' '}
-      <input type='search' value={searchString} onChange={(e) => setSearchString(e.target.value)} />
-    </label>
+    <div className='search'>
+      <label>
+        Search: {' '}
+        <input type='search' value={searchString} onChange={(e) => setSearchString(e.target.value)} />
+      </label>
+    </div>
   )
 }
 

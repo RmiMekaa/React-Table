@@ -10,7 +10,7 @@ EntriesDisplayer.propTypes = {
 
 export function EntriesDisplayer({ currentPage, pageSize, orderedData, slice }) {
   return (
-    <span>
+    <span className='entriesDisplayer'>
       Showing {currentPage === 1 ? currentPage : ((currentPage - 1) * pageSize) + 1}
       -{((pageSize * currentPage) > orderedData.length)
         ? (currentPage * pageSize) - (pageSize - slice.length)

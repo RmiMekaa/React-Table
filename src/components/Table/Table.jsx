@@ -4,7 +4,7 @@ import { TableBody } from "./TableBody.jsx";
 
 export function Table({ headers, slice, ordering, setOrdering }) {
   return (
-    <div className='tableWrapper'>
+    <div className='table'>
       <table>
         <TableHeader {...{ headers, ordering, setOrdering }} />
         <TableBody {...{ slice }} />

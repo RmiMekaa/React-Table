@@ -11,7 +11,7 @@ export function Header({ selectPageSize, pageSize, setPageSize, pageSizeOptions,
   return (
     (allowSearch || selectPageSize)
       ? (
-        <div className="header">
+        <div className="tableHeader">
           {selectPageSize && <SelectPageSize {...{ pageSize, setPageSize, pageSizeOptions }} />}
           {allowSearch && <TableSearch {...{ searchString, setSearchString }} />}
         </div>

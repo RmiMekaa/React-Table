@@ -16,15 +16,21 @@ TableHeader.propTypes = {
  * @component 
  */
 export function TableHeader({ headers, ordering, setOrdering }) {
+  let i = 0;
   return (
     <thead>
       <tr>
         {headers.map(header => {
+          i++;
           return (
-            <th key={header.key} onClick={() => handleOrdering(header.key, ordering, setOrdering)}>
-              <div className="th-content">
+            <th
+              key={header.key}
+              className={"table-th " + "table-th-" + i}
+              onClick={() => handleOrdering(header.key, ordering, setOrdering)}
+            >
+              <div className="table-th-content">
                 {header.name}
-                <span className='sortIcons'>
+                <span className='table-th-sortIcons'>
                   <button className={(ordering && ordering.property === header.key && ordering.order === "ascending") ? "sortIcon--active" : null}>▲</button>
                   <button className={(ordering && ordering.property === header.key && ordering.order === "descending") ? "sortIcon--active" : null}>▼</button>
                 </span>

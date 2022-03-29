@@ -9,12 +9,14 @@ SelectPageSize.propTypes = {
 
 export function SelectPageSize({ pageSize, setPageSize, pageSizeOptions }) {
   return (
-    <label>
-      Show{' '}
-      <select value={pageSize} onChange={(e) => setPageSize(parseInt(e.target.value))}>
-        {pageSizeOptions.map(option => <option key={option}>{option}</option>)}
-      </select>
-      {' '}Entries
-    </label>
+    <div className='selectPageSize'>
+      <label>
+        Show{' '}
+        <select value={pageSize} onChange={(e) => setPageSize(parseInt(e.target.value))}>
+          {pageSizeOptions.map(option => <option key={option}>{option}</option>)}
+        </select>
+        {' '}Entries
+      </label>
+    </div>
   )
 }

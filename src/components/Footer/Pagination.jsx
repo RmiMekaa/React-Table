@@ -19,7 +19,7 @@ export function Pagination({ range, currentPage, setCurrentPage }) {
       {range.map((pageNumber, index) => (
         <button
           key={index}
-          className={currentPage === pageNumber ? "page--active" : null}
+          className={currentPage === pageNumber ? "currentPage" : null}
           onClick={() => setCurrentPage(pageNumber)}
         >
           {pageNumber}

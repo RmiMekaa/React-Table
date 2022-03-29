@@ -15,14 +15,16 @@ TableBody.propTypes = {
  */
 export function TableBody({ slice }) {
   let key = 0;
+  let i = 0;
   return (
     <tbody>
       {slice.map(object => {
         key++;
+        i++;
         return (
-          <tr key={"TableRow" + key}>
+          <tr className={"table-tr " + "table-tr-" + i} key={"TableRow" + key}>
             {Object.values(object).map(value => {
-              return <td key={"TableData" + key++}>{value}</td>
+              return <td className={"table-td"} key={"TableData" + key++}>{value}</td>
             })}
           </tr>
         )

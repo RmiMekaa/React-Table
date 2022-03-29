@@ -1,54 +1,52 @@
 .mainContainer {
   font-family: Arial, Helvetica, sans-serif;
   max-width: 100%;
+  color: black;
 }
 
 /* HEADER */
 
-.header {
-  padding: 1.2rem 1rem 1rem 1rem;
+.tableHeader {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   justify-content: space-between;
-  background-color: transparent;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  padding-bottom: 0.5rem;
 }
-.header select, .header input {
+.selectPageSize select, .search input {
   color: inherit;
-  background-color: transparent;
   border-radius: 0.2rem;
   border: 1px solid black;
   border-color: inherit;
   outline: none;
 }
-.header select option {
-  background-color: inherit;
+
+.search input {
+  padding: 0.2rem;
 }
+
+@media all and (min-width: 426px) {
+  .tableHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+  }  
+}
+
 
 /* TABLE */
 
-.tableWrapper {
+.table {
   overflow-x: auto;
 }
-.tableWrapper table {
+
+table {
   border-collapse: collapse;
   width: 100%;
-  color: black;
 }
-.tableWrapper table td, .tableWrapper table th {
-  border: 2px solid #ddd;
-  padding: 0.5rem;
-}
-.tableWrapper table tr:nth-child(even) { 
-  background-color: #f2f2f2; 
-}
-.tableWrapper table tr:nth-child(odd) { 
-  background-color: #f2f2f2;
-}
-.tableWrapper table tr:hover {
-  background-color: white;
-}
-.tableWrapper table th {
+
+.table-th {
   padding: 0.5rem;
   text-align: left;
   background-color: black;
@@ -56,23 +54,38 @@
   cursor: pointer;
   border: black 2px solid;
 }
-.th-content {
+
+.table-th-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
   user-select: none;
+}
+
+.table-td {
+  border: 2px solid #ddd;
+  padding: 0.5rem;
+}
+
+.table-tr:nth-child(even) { 
+  background-color: #f2f2f2; 
+}
+.table-tr:nth-child(odd) { 
+  background-color: #f2f2f2;
+}
+.table-tr:hover {
+  background-color: white;
 }
 
 /* SORT ICONS */
 
-.sortIcons {
+.table-th-sortIcons {
   width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.sortIcons button {
+.table-th-sortIcons button {
   font-size: 0.5rem;
   color: rgba(255, 255, 255, 0.5);
   padding: 0;
@@ -82,42 +95,58 @@
   width: fit-content;
   height: fit-content;
 }
-.sortIcons button:first-child {
+.table-th-sortIcons button:first-child {
   position: relative;
   top: 1px;
 }
-.sortIcons button.sortIcon--active {
+.table-th-sortIcons button.sortIcon--active {
   color: white; 
   font-size: 0.6rem;
 }
 
 /* FOOTER */
 
-.footer {
-  color: black;
+.tableFooter {
   padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  background-color: rgb(60, 60, 60);
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  background-color: transparent;
+}
 
+@media all and (min-width: 426px) {
+  .tableFooter {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }  
 }
 
 /* PAGINATION */
 
-.pagination button {
-  border: transparent solid 2px;
-  padding: 7px 14px;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-right: 4px;
-  margin-left: 4px;
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
-.pagination .page--active {
+
+.pagination button {
+  color: inherit;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: transparent solid 2px;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.pagination button:first-of-type {
+  width: 5.5rem;
+}
+.pagination button:last-of-type {
+  width: 5.5rem;
+}
+
+.pagination .currentPage {
   color: white;
   border: black solid 2px;
   background: black;
@@ -145,16 +174,5 @@
   border-bottom-right-radius: 1rem;
 }
 
-.table {
- overflow-x: auto;
-}
-
 /*---Media Queries---*/
 
-@media all and (min-width: 426px) {
-  .footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }  
-}

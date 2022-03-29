@@ -20,7 +20,7 @@ export function Footer({ range, setCurrentPage, currentPage, slice, orderedData,
   }, [slice, currentPage, setCurrentPage]);
 
   return (
-    <div className="footer">
+    <div className="tableFooter">
       {displayEntries && <EntriesDisplayer currentPage={currentPage} pageSize={pageSize} orderedData={orderedData} slice={slice} />}
       {range.length > 1 && <Pagination range={range} currentPage={currentPage} setCurrentPage={setCurrentPage} />}
     </div>
