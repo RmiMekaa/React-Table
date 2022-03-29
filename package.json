@@ -1,6 +1,6 @@
 {
   "name": "interactive-react-table",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "An interactive table component using react",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
