@@ -20,6 +20,7 @@
   border: 1px solid black;
   border-color: inherit;
   outline: none;
+  background-color: transparent;
 }
 
 /* SEARCH WRAPPER */
