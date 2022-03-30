@@ -41,7 +41,7 @@ export function ReactTable({
       <Header {...{ selectPageSize, pageSize, setPageSize, pageSizeOptions, searchString, setSearchString, allowSearch }} />
       <Table {...{ headers, slice, ordering, setOrdering }} />
       {(orderedData.length === 0)
-        ? <span className='noDataMsg'>No data found</span>
+        ? <span className='noDataMsg'>No data found for "{searchString}"</span>
         : <Footer {...{ range, slice, setCurrentPage, currentPage, orderedData, pageSize, displayEntries }} />}
     </div>
   )
