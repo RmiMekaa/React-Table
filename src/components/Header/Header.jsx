@@ -12,7 +12,7 @@ export function Header({ selectPageSize, pageSize, setPageSize, pageSizeOptions,
     (allowSearch || selectPageSize)
       ? (
         <div className="tableHeader">
-          {selectPageSize && <SelectPageSize {...{ pageSize, setPageSize, pageSizeOptions }} />}
+          {(selectPageSize && pageSizeOptions.length > 1) && <SelectPageSize {...{ pageSize, setPageSize, pageSizeOptions }} />}
           {allowSearch && <TableSearch {...{ searchString, setSearchString }} />}
         </div>
       ) : null
