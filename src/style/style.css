@@ -1,7 +1,6 @@
 .mainContainer {
   font-family: Arial, Helvetica, sans-serif;
   max-width: 100%;
-  color: black;
 }
 
 /* HEADER CONTAINER */
@@ -14,7 +13,8 @@
 }
 
 /* STYLE FOR SEARCH AND SELECT INPUTS TAGS */
-.selectPageSize select, .search input {
+.selectPageSize select,
+.search input {
   color: inherit;
   border-radius: 0.2rem;
   border: 1px solid black;
@@ -34,7 +34,7 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1rem;
-  }  
+  }
 }
 
 /* TABLE WRAPPER HANDLING OVERFLOW FOR MOBILE */
@@ -69,12 +69,14 @@
   padding: 0.5rem;
 }
 
-.table-tr:nth-child(even) { 
-  background-color: #f2f2f2; 
-}
-.table-tr:nth-child(odd) { 
+.table-tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+
+.table-tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
 .table-tr:hover {
   background-color: white;
 }
@@ -86,6 +88,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .table-th-sortIcons button {
   font-size: 0.5rem;
   color: rgba(255, 255, 255, 0.5);
@@ -96,12 +99,14 @@
   width: fit-content;
   height: fit-content;
 }
+
 .table-th-sortIcons button:first-child {
   position: relative;
   top: 1px;
 }
+
 .table-th-sortIcons button.sortIcon--active {
-  color: white; 
+  color: white;
   font-size: 0.6rem;
 }
 
@@ -119,7 +124,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }  
+  }
 }
 
 /* PAGINATION */
@@ -141,6 +146,7 @@
 .pagination button:first-of-type {
   width: 5.5rem;
 }
+
 .pagination button:last-of-type {
   width: 5.5rem;
 }
@@ -150,12 +156,15 @@
   border: black solid 2px;
   background: black;
 }
+
 .pagination button[disabled] {
   cursor: initial;
 }
+
 .pagination button[disabled]:hover {
   border: transparent 2px solid;
 }
+
 .pagination button:hover {
   border: black solid 2px;
 }
@@ -166,7 +175,7 @@
   background-color: #f2f2f2;
   display: inline-block;
   padding: 2rem;
-  text-align: center; 
+  text-align: center;
   width: 100%;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
