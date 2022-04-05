@@ -12,8 +12,9 @@ A react component to easily create an interactive table.
 ## Installation
 
 Prerequisites: [React](https://fr.reactjs.org/)
-
+```
 npm i interactive-react-table
+```
 
 ## Basic Usage Example
 
@@ -60,6 +61,12 @@ Use component:
 ```
 <ReactTable data={data} headers={headers} />
 ```
+
+Render:  
+<img src="examples/basicExample.jpg" alt="basic example" />
+
+Advanced example:
+<img src="examples/advancedExample.jpg" alt="basic example" width="100%"/>
 
 ## Props
 
