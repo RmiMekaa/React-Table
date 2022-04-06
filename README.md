@@ -29,12 +29,20 @@ const data = [
   {
     firstName: 'Bruce',
     lastName: 'Wayne',
-    birthdate: '1989-02-03'
+    birthdate: '1939-03-30',
+    city: 'Gotham City'
   },
   {
-    firstName: 'Al',
-    lastName: 'Simmons',
-    birthdate: '1982-12-12'
+    firstName: 'Peter',
+    lastName: 'Parker',
+    birthdate: '1962-08-15',
+    city: 'New York'
+  },
+  {
+    firstName: 'Clark',
+    lastName: 'Kent',
+    birthdate: '1939-06-12',
+    city: 'Metropolis'
   }
 ]
 ```
@@ -43,16 +51,20 @@ Config headers:
 ```
 const headers = [
   {
-    name: "First Name",
-    key: "firstName"
+    name: 'First Name',
+    key: 'firstName'
   },
   {
-    name: "Last Name",
-    key: "lastName"
+    name: 'Last Name',
+    key: 'lastName'
   },
   {
-    name: "Date of birth",
-    key: "birthdate"
+    name: 'Date of birth',
+    key: 'birthdate'
+  },
+  {
+    name: 'City',
+    key: 'city'
   }
 ]
 ```
@@ -63,10 +75,7 @@ Use component:
 ```
 
 Render:  
-<img src="examples/basicExample.jpg" alt="basic example" />
-
-Advanced example:
-<img src="examples/advancedExample.jpg" alt="basic example" width="100%"/>
+<img src='img/basicExample.jpg' alt='basic example' />
 
 ## Props
 
@@ -101,14 +110,41 @@ Advanced example:
 
 ## Customize Style
 
-Coming soon...
+Just write some styles for class <span style="color:#ce9178">.mainContainer</span>. Your styles will be prioritized over library styles, then target the following selectors to customize what you want.
+
+### Header
+  - Container: <span style="color:#ce9178">.tableHeader</span>
+    - Select page size section: <span style="color:#ce9178">.selectPageSize</span>
+    - Search section: <span style="color:#ce9178">.search</span>
+
+### Table
+  - Container: <span style="color:#ce9178">.table</span>
+    - Table headers (th): <span style="color:#ce9178">.table-th</span>
+      You can target a specific header by index using: <span style="color:#ce9178">.table-th-1, .table-th-2, .table-th-3,</span>etc.
+      - Column headers content: <span style="color:#ce9178">.table-th-content</span>
+      - Sort Icons: <span style="color:#ce9178">.table-th-sortIcons</span>
+        - Active sort icon: <span style="color:#ce9178">sortIcon--active</span>
+    - Table rows (tr): <span style="color:#ce9178">.table-tr</span>
+      You can target a specific row by index using: <span style="color:#ce9178">.table-tr-1, .table-tr-2, .table-tr-3,</span>etc.
+      - Table data cells (td): <span style="color:#ce9178">.table-td</span>
+
+### Footer
+  - Container: <span style="color:#ce9178">.tableFooter</span>
+    - Entries displayer: <span style="color:#ce9178">.entriesDisplayer</span>
+    - Pagination section: <span style="color:#ce9178">.pagination</span>
+    - Pagination buttons: <span style="color:#ce9178">.pagination button</span>
+    - Pagination current page button: <span style="color:#ce9178">.pagination button.currentPage</span>
+
+#### Example:
+
+<img src='img/customStyleExample.jpg' alt='custom style example' />
 
 <br/><br/>
 
-<p float="left">
-  <img alt="Git" title="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="32px"/>
-  <img alt="CSS3" title="CSS3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="32px"/>
-  <img alt="JavaScript" title="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" width="32px"/>
-  <img alt="React" title="React" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="32px"/>
-  <img alt="Storybook" title="Storybook" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" width="32px"/>
+<p float='left'>
+  <img alt='Git' title='Git' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' width='32px'/>
+  <img alt='CSS3' title='CSS3' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' width='32px'/>
+  <img alt='JavaScript' title='JavaScript' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg' width='32px'/>
+  <img alt='React' title='React' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' width='32px'/>
+  <img alt='Storybook' title='Storybook' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg' width='32px'/>
 </p>
