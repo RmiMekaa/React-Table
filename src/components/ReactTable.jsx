@@ -59,7 +59,7 @@ ReactTable.propTypes = {
 }
 
 ReactTable.defaultProps = {
-  pageSizeOptions: [25, 50, 100],
+  pageSizeOptions: [10, 25, 50, 100],
   displayEntries: true,
   allowSearch: true,
   selectPageSize: true
