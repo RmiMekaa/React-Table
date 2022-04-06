@@ -2,12 +2,13 @@
 
 A react component to easily create an interactive table.
 
-## Features
-
+#### Features
 - Column sorting
 - Data search
 - Pagination
-- Display number of entries
+- Entries counter
+
+-----------------
 
 ## Installation
 
@@ -15,6 +16,8 @@ Prerequisites: [React](https://fr.reactjs.org/)
 ```
 npm i interactive-react-table
 ```
+
+-----------------
 
 ## Basic Usage Example
 
@@ -77,6 +80,8 @@ Use component:
 Render:  
 <img src='img/basicExample.jpg' alt='basic example' />
 
+-----------------
+
 ## Props
 
 - `data: {Array<Objects>}`  
@@ -108,38 +113,42 @@ Render:
   - Default: true
   - Disable page size selector feature by setting it to false
 
+-----------------
+
 ## Customize Style
 
-Just write some styles for class <span style="color:#ce9178">.mainContainer</span>. Your styles will be prioritized over library styles, then target the following selectors to customize what you want.
+Just write some styles for class `.mainContainer` . Your styles will be prioritized over library styles, then target the following selectors to customize what you want.
 
 ### Header
-  - Container: <span style="color:#ce9178">.tableHeader</span>
-    - Select page size section: <span style="color:#ce9178">.selectPageSize</span>
-    - Search section: <span style="color:#ce9178">.search</span>
+  - Container: `.tableHeader `
+    - Select page size section: `.selectPageSize` 
+    - Search section: `.search` 
 
 ### Table
-  - Container: <span style="color:#ce9178">.table</span>
-    - Table headers (th): <span style="color:#ce9178">.table-th</span>
-      You can target a specific header by index using: <span style="color:#ce9178">.table-th-1, .table-th-2, .table-th-3,</span>etc.
-      - Column headers content: <span style="color:#ce9178">.table-th-content</span>
-      - Sort Icons: <span style="color:#ce9178">.table-th-sortIcons</span>
-        - Active sort icon: <span style="color:#ce9178">sortIcon--active</span>
-    - Table rows (tr): <span style="color:#ce9178">.table-tr</span>
-      You can target a specific row by index using: <span style="color:#ce9178">.table-tr-1, .table-tr-2, .table-tr-3,</span>etc.
-      - Table data cells (td): <span style="color:#ce9178">.table-td</span>
+  - Container: `.table` 
+    - Table headers (th): `.table-th`  
+      You can target a specific header by index using: `.table-th-1`, `.table-th-2`, `.table-th-3`, etc.
+    - Table headers content: `.table-th-content` 
+    - Sort Icons: `.table-th-sortIcons` 
+    - Active sort icon: `.sortIcon--active` 
+    - Table rows (tr): `.table-tr`  
+      You can target a specific row by index using: `.table-tr-1`, `.table-tr-2`, `.table-tr-3`, etc.
+    - Table data cells (td): `.table-td`
 
 ### Footer
-  - Container: <span style="color:#ce9178">.tableFooter</span>
-    - Entries displayer: <span style="color:#ce9178">.entriesDisplayer</span>
-    - Pagination section: <span style="color:#ce9178">.pagination</span>
-    - Pagination buttons: <span style="color:#ce9178">.pagination button</span>
-    - Pagination current page button: <span style="color:#ce9178">.pagination button.currentPage</span>
+  - Container: `.tableFooter`
+    - Entries displayer: `.entriesDisplayer`
+    - Pagination section: `.pagination`
+    - Pagination buttons: `.pagination button`
+    - Pagination current page button: `.pagination button.currentPage`
 
 #### Example:
 
 <img src='img/customStyleExample.jpg' alt='custom style example' />
 
-<br/><br/>
+Hope it helps !
+
+-----------------
 
 <p float='left'>
   <img alt='Git' title='Git' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' width='32px'/>
