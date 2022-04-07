@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build-lib": "rollup -c"
+    "build-lib": "rollup -c",
+    "jsdoc": "npx jsdoc -c ./jsdocConfig.json"
   },
   "author": "Mekaa",
   "license": "ISC",

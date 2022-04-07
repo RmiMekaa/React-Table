@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>React Table</h1>
+<p>A react component to easily create an interactive table.</p>
+<h4>Features</h4>
+<ul>
+<li>Column sorting</li>
+<li>Data search</li>
+<li>Pagination</li>
+<li>Entries counter</li>
+</ul>
+<hr>
+<h2>Installation</h2>
+<p>Prerequisites: <a href="https://fr.reactjs.org/">React</a></p>
+<pre class="prettyprint source"><code>npm i interactive-react-table
+</code></pre>
+<hr>
+<h2>Basic Usage Example</h2>
+<p>Import ReactTable component:</p>
+<pre class="prettyprint source"><code>import { ReactTable } from 'interactive-react-table';
+</code></pre>
+<p>Set some data:</p>
+<pre class="prettyprint source"><code>const data = [
+  {
+    firstName: 'Bruce',
+    lastName: 'Wayne',
+    birthdate: '1939-03-30',
+    city: 'Gotham City'
+  },
+  {
+    firstName: 'Peter',
+    lastName: 'Parker',
+    birthdate: '1962-08-15',
+    city: 'New York'
+  },
+  {
+    firstName: 'Clark',
+    lastName: 'Kent',
+    birthdate: '1939-06-12',
+    city: 'Metropolis'
+  }
+]
+</code></pre>
+<p>Config headers:</p>
+<pre class="prettyprint source"><code>const headers = [
+  {
+    name: 'First Name',
+    key: 'firstName'
+  },
+  {
+    name: 'Last Name',
+    key: 'lastName'
+  },
+  {
+    name: 'Date of birth',
+    key: 'birthdate'
+  },
+  {
+    name: 'City',
+    key: 'city'
+  }
+]
+</code></pre>
+<p>Use component:</p>
+<pre class="prettyprint source"><code>&lt;ReactTable data={data} headers={headers} />
+</code></pre>
+<p>Render:<br>
+<img src='img/basicExample.jpg' alt='basic example' /></p>
+<hr>
+<h2>Props</h2>
+<ul>
+<li>
+<p><code>data: {Array&lt;Objects&gt;}</code></p>
+<ul>
+<li>Required</li>
+<li>The data you want to display in the table.</li>
+<li>To ensure a good behavior, make sure that each object have the same properties.</li>
+</ul>
+</li>
+<li>
+<p><code>headers : {Array&lt;Objects&gt;}</code></p>
+<ul>
+<li>Required</li>
+<li>Handle table columns headers.</li>
+<li>Each object must contain two properties:
+<ul>
+<li>name : The name to display in the column header</li>
+<li>key : A string which refers to the corresponding property name.</li>
+</ul>
+</li>
+<li>The items in this array must follow the same order as the data objects properties.</li>
+</ul>
+</li>
+<li>
+<p><code>pageSizeOptions : {Array&lt;Numbers&gt;}</code></p>
+<ul>
+<li>Default: [10, 25, 50]</li>
+<li>Providing options to configure the number of rows per page.</li>
+</ul>
+</li>
+<li>
+<p><code>displayEntries : {Boolean}</code></p>
+<ul>
+<li>Default: true</li>
+<li>Disable entries displayer feature by setting it to false</li>
+</ul>
+</li>
+<li>
+<p><code>allowSearch : {Boolean}</code></p>
+<ul>
+<li>Default: true</li>
+<li>Disable search feature by setting it to false</li>
+</ul>
+</li>
+<li>
+<p><code>selectPageSize : {Boolean}</code></p>
+<ul>
+<li>Default: true</li>
+<li>Disable page size selector feature by setting it to false</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Customize Style</h2>
+<p>Just write some styles for class <code>.mainContainer</code> . Your styles will be prioritized over library styles, then target the following selectors to customize what you want.</p>
+<h3>Header</h3>
+<ul>
+<li>Container: <code>.tableHeader </code>
+<ul>
+<li>Select page size section: <code>.selectPageSize</code></li>
+<li>Search section: <code>.search</code></li>
+</ul>
+</li>
+</ul>
+<h3>Table</h3>
+<ul>
+<li>Container: <code>.table</code>
+<ul>
+<li>Table headers (th): <code>.table-th</code><br>
+You can target a specific header by index using: <code>.table-th-1</code>, <code>.table-th-2</code>, <code>.table-th-3</code>, etc.</li>
+<li>Table headers content: <code>.table-th-content</code></li>
+<li>Sort Icons: <code>.table-th-sortIcons</code></li>
+<li>Active sort icon: <code>.sortIcon--active</code></li>
+<li>Table rows (tr): <code>.table-tr</code><br>
+You can target a specific row by index using: <code>.table-tr-1</code>, <code>.table-tr-2</code>, <code>.table-tr-3</code>, etc.</li>
+<li>Table data cells (td): <code>.table-td</code></li>
+</ul>
+</li>
+</ul>
+<h3>Footer</h3>
+<ul>
+<li>Container: <code>.tableFooter</code>
+<ul>
+<li>Entries displayer: <code>.entriesDisplayer</code></li>
+<li>Pagination section: <code>.pagination</code></li>
+<li>Pagination buttons: <code>.pagination button</code></li>
+<li>Pagination current page button: <code>.pagination button.currentPage</code></li>
+</ul>
+</li>
+</ul>
+<h4>Example:</h4>
+<img src='img/customStyleExample.jpg' alt='custom style example' />
+<p>Hope it helps !</p>
+<hr>
+<p float='left'>
+  <img alt='Git' title='Git' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' width='32px'/>
+  <img alt='CSS3' title='CSS3' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' width='32px'/>
+  <img alt='JavaScript' title='JavaScript' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg' width='32px'/>
+  <img alt='React' title='React' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' width='32px'/>
+  <img alt='Storybook' title='Storybook' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg' width='32px'/>
+</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#calculateRange">calculateRange</a></li><li><a href="global.html#EntriesDisplayer">EntriesDisplayer</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#Pagination">Pagination</a></li><li><a href="global.html#ReactTable">ReactTable</a></li><li><a href="global.html#SelectPageSize">SelectPageSize</a></li><li><a href="global.html#sliceData">sliceData</a></li><li><a href="global.html#TableBody">TableBody</a></li><li><a href="global.html#TableHeader">TableHeader</a></li><li><a href="global.html#TableSearch">TableSearch</a></li><li><a href="global.html#useOrdering">useOrdering</a></li><li><a href="global.html#usePagination">usePagination</a></li><li><a href="global.html#useSearch">useSearch</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Apr 07 2022 14:38:15 GMT+0200 (heure d’été d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
