@@ -1,10 +1,11 @@
 import React from 'react'
 
 /**
+ * Component for the search section
  * @param {Object} props
  * @param {String} props.searchString 
  * @param {Function} props.setSearchString 
- * @returns 
+ * @component
  */
 export function TableSearch({ searchString, setSearchString }) {
   return (

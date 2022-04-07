@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react';
 
+/**
+ * Custom hook used to filter the array
+ * @param {Array.<Object>} data globalData 
+ * @param {String} searchString Search string from the input search
+ * @returns {Array.<Object>} Filtered data
+ */
 export function useSearch(data, searchString) {
   const [filteredData, setFilteredData] = useState(data)
 
