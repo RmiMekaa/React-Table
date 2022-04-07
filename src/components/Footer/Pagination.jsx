@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-Pagination.propTypes = {
-  range: PropTypes.arrayOf(PropTypes.number).isRequired,
-  currentPage: PropTypes.number.isRequired,
-  setCurrentPage: PropTypes.func.isRequired,
-}
-
+/**
+ * Component for the pagination section
+ * @param {Object} props 
+ * @param {Array.<Number>} props.range Table range
+ * @param {Function} props.setCurrentPage Function to update currentPage value
+ * @param {Number} props.currentPage Current page number
+ * @returns 
+ */
 export function Pagination({ range, currentPage, setCurrentPage }) {
   return (
     <div className='pagination'>
@@ -33,4 +35,10 @@ export function Pagination({ range, currentPage, setCurrentPage }) {
       </button>
     </div>
   )
+}
+
+Pagination.propTypes = {
+  range: PropTypes.arrayOf(PropTypes.number).isRequired,
+  currentPage: PropTypes.number.isRequired,
+  setCurrentPage: PropTypes.func.isRequired,
 }

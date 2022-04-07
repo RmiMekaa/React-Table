@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-SelectPageSize.propTypes = {
-  pageSize: PropTypes.number,
-  setPageSize: PropTypes.func,
-  pageSizeOptions: PropTypes.array,
-}
-
+/**
+ * @param {Object} props
+ * @param {Number} props.pageSize Page size
+ * @param {Function} props.setPageSize Function to update pageSize value
+ * @param {Array.<Number>} props.pageSizeOptions Provide options for the page size. Example: [25, 50, 100]
+ * @component 
+ */
 export function SelectPageSize({ pageSize, setPageSize, pageSizeOptions }) {
   return (
     <div className='selectPageSize'>
@@ -19,4 +20,10 @@ export function SelectPageSize({ pageSize, setPageSize, pageSizeOptions }) {
       </label>
     </div>
   )
+}
+
+SelectPageSize.propTypes = {
+  pageSize: PropTypes.number,
+  setPageSize: PropTypes.func,
+  pageSizeOptions: PropTypes.array,
 }

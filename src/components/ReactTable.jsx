@@ -32,6 +32,7 @@ export function ReactTable({
   const [searchString, setSearchString] = useState("")
   const [pageSize, setPageSize] = useState(pageSizeOptions[0])
   const [currentPage, setCurrentPage] = useState(1);
+
   const filteredData = useSearch(data, searchString);
   const orderedData = useOrdering(filteredData, ordering);
   const { slice, range } = usePagination(orderedData, currentPage, pageSize, ordering);
@@ -44,7 +45,7 @@ export function ReactTable({
         ? <span className='noDataMsg'>
           {data.length === 0 ? "No data" : "No data found for \"" + searchString + "\""}
         </span>
-        : <Footer {...{ range, slice, setCurrentPage, currentPage, orderedData, pageSize, displayEntries }} />}
+        : <Footer {...{ range, slice, setCurrentPage, currentPage, filteredData, pageSize, displayEntries }} />}
     </div>
   )
 }
