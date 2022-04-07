@@ -1,6 +1,8 @@
 .mainContainer {
   font-family: Arial, Helvetica, sans-serif;
   max-width: 100%;
+  width: 100%;
+  min-height: 100vh;
 }
 
 /* HEADER CONTAINER */
@@ -132,6 +134,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  min-width: 100%;
 }
 
 .pagination button {
