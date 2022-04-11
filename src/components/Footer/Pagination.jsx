@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
  * @param {Array.<Number>} props.range Table range
  * @param {Function} props.setCurrentPage Function to update currentPage value
  * @param {Number} props.currentPage Current page number
- * @returns 
+ * @returns {React.ReactElement} 
  */
 export function Pagination({ range, currentPage, setCurrentPage }) {
   return (

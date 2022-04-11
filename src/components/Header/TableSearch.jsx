@@ -1,11 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 /**
  * Component for the search section
  * @param {Object} props
- * @param {String} props.searchString 
- * @param {Function} props.setSearchString 
- * @component
+ * @param {String} props.searchString The search string
+ * @param {Function} props.setSearchString Function to update searchString value
+ * @returns {React.ReactElement} 
  */
 export function TableSearch({ searchString, setSearchString }) {
   return (
@@ -18,3 +19,7 @@ export function TableSearch({ searchString, setSearchString }) {
   )
 }
 
+TableSearch.propTypes = {
+  searchString: PropTypes.string,
+  setSearchString: PropTypes.func,
+}

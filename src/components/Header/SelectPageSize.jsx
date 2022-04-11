@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
  * @param {Number} props.pageSize Page size
  * @param {Function} props.setPageSize Function to update pageSize value
  * @param {Array.<Number>} props.pageSizeOptions Provide options for the page size. Example: [25, 50, 100]
- * @component 
+ * @returns {React.ReactElement} 
  */
 export function SelectPageSize({ pageSize, setPageSize, pageSizeOptions }) {
   return (

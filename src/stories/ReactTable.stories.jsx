@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { DATA } from '../Mock/data';
 import { HEADERS } from '../Mock/headers';
 
-import { ReactTable } from '../components/ReactTable.jsx';
+import { default as ReactTable } from '../components/ReactTable.jsx';
 
 const stories = storiesOf('React Table', module);
 

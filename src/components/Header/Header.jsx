@@ -13,7 +13,7 @@ import PropTypes from 'prop-types'
  * @param {String} props.searchString The search string from input search
  * @param {Function} props.setSearchString Function to update searchString value
  * @param {Boolean} props.allowSearch Control if the search section should be displayed or not
- * @component 
+ * @returns {React.ReactElement} 
  */
 export function Header({ selectPageSize, pageSize, setPageSize, pageSizeOptions, searchString, setSearchString, allowSearch }) {
   return (

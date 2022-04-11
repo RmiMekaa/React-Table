@@ -13,8 +13,7 @@ import PropTypes from 'prop-types'
  * @param {Array.<Object>} props.filteredData The filtered data
  * @param {Number} props.pageSize Page size
  * @param {Boolean} props.displayEntries Control if the entries counter should be displayed or not
- * 
- * @component 
+ * @returns {React.ReactElement} 
  */
 export function Footer({ range, setCurrentPage, currentPage, slice, filteredData, pageSize, displayEntries }) {
 

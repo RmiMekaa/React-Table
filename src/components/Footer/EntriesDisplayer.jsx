@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
  * @param {Number} props.pageSize Page size
  * @param {Array.<Object>} props.filteredData filtered Data
  * @param {Array.<Object>} props.slice Data slice displayed in the table
- * @component 
+ * @returns {React.ReactElement} 
  */
 export function EntriesDisplayer({ currentPage, pageSize, filteredData, slice }) {
   return (

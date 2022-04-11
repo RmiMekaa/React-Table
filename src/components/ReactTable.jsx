@@ -17,9 +17,9 @@ import '../style/style.css';
  * @param {boolean} [props.displayEntries] Disable entries displayer by setting it to false
  * @param {boolean} [props.allowSearch] Disable search input by setting it to false
  * @param {boolean} [props.selectPageSize] Disable select input by setting it to false
- * @component 
+ * @returns {React.ReactElement} 
  */
-export function ReactTable({
+export default function ReactTable({
   data,
   headers,
   pageSizeOptions,

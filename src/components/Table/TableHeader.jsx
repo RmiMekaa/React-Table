@@ -1,19 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-TableHeader.propTypes = {
-  headers: PropTypes.array,
-  ordering: PropTypes.object,
-  setOrdering: PropTypes.func,
-}
-
 /**
  * Table header component
  * @param {Object} props
  * @param {Object[]} props.headers Array containg the headers
  * @param {Object} props.ordering Ordering state
  * @param {function} props.setOrdering Function to update ordering
- * @component 
+ * @returns {React.ReactElement} 
  */
 export function TableHeader({ headers, ordering, setOrdering }) {
   let i = 0;
@@ -43,6 +37,13 @@ export function TableHeader({ headers, ordering, setOrdering }) {
   )
 }
 
+/**
+ * Handle table ordering, called when user click on any th
+ * @param {String} key 
+ * @param {Object} ordering Object containing the targeted property and the order
+ * @param {Function} setOrdering Update ordering values
+ * @returns {void} Update the ordering state
+ */
 function handleOrdering(key, ordering, setOrdering) {
   let newOrder;
   //Si la colonne est déjà triée
@@ -54,4 +55,10 @@ function handleOrdering(key, ordering, setOrdering) {
   //Si la colonne n'est pas déjà triée
   else newOrder = { order: 'ascending', property: key }
   setOrdering(newOrder)
+}
+
+TableHeader.propTypes = {
+  headers: PropTypes.array,
+  ordering: PropTypes.object,
+  setOrdering: PropTypes.func,
 }
