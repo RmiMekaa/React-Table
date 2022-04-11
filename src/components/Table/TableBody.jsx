@@ -1,23 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-TableBody.propTypes = {
-  slice: PropTypes.array,
-  pageSize: PropTypes.number,
-  searchString: PropTypes.string,
-}
 
 /**
  * Table body component
  * @param {Object} props
- * @param {Object[]} props.slice Data to display in the body
- * @component 
+ * @param {Array.<Object>} props.slice A slice of data to display in the data
+ * @returns {React.ReactElement}
  */
 export function TableBody({ slice }) {
   let key = 0;
   let i = 0;
   return (
-    <tbody>
+    <tbody style={{ "minHeight": (slice.length * 3) + "rem" }}>
       {slice.map(object => {
         key++;
         i++;
@@ -31,4 +26,8 @@ export function TableBody({ slice }) {
       })}
     </tbody>
   )
+}
+
+TableBody.propTypes = {
+  slice: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
