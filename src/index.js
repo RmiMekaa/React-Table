@@ -1,1 +1,1 @@
-export { ReactTable } from './components/ReactTable.jsx'
+export { default } from './components/ReactTable.jsx'
