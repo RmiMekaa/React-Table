@@ -7,6 +7,7 @@ A react component to easily create an interactive table.
 - Data search
 - Pagination
 - Entries counter
+- Responsive design
 
 -----------------
 
@@ -23,7 +24,7 @@ npm i interactive-react-table
 
 Import ReactTable component:
 ```
-import { ReactTable } from 'interactive-react-table';
+import { default as ReactTable } from 'interactive-react-table';
 ```
 
 Set some data:
