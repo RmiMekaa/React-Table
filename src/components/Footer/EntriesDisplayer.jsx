@@ -27,6 +27,6 @@ export function EntriesDisplayer({ currentPage, pageSize, filteredData, slice })
 EntriesDisplayer.propTypes = {
   currentPage: PropTypes.number.isRequired,
   pageSize: PropTypes.number.isRequired,
-  orderedData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  filteredData: PropTypes.arrayOf(PropTypes.object).isRequired,
   slice: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
