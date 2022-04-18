@@ -24,7 +24,7 @@ export default [
         minimize: true,
       }),
       babel({
-        exclude: ['node_modules/**', '.storybook/**', 'docs/**, **/stories'],
+        exclude: ['node_modules/**', '.storybook/**', 'docs/**, **/stories, **/Mock'],
         presets: ['@babel/preset-react']
       }),
       external(),
