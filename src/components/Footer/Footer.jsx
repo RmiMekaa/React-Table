@@ -27,7 +27,7 @@ export function Footer({ range, setCurrentPage, currentPage, slice, filteredData
       {range.length > 1 && <Pagination {...{ range, currentPage, setCurrentPage }} />}
     </div>
   );
-};
+}
 
 Footer.propTypes = {
   range: PropTypes.arrayOf(PropTypes.number).isRequired,
