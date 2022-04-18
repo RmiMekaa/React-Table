@@ -36,30 +36,3 @@ export const HEADERS = [
     key: "zipCode"
   }
 ]
-
-export const HEADERS2 = [
-  {
-    name: "Id",
-    key: "id"
-  },
-  {
-    name: "First Name",
-    key: "first_name"
-  },
-  {
-    name: "Last Name",
-    key: "last_name"
-  },
-  {
-    name: "Email",
-    key: "email"
-  },
-  {
-    name: "Gender",
-    key: "gender"
-  },
-  {
-    name: "IP Adress",
-    key: "ip_address"
-  },
-]
