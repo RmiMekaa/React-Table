@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from 'prop-types'
 
 /**
  * Custom hook used for pagination
@@ -47,4 +48,11 @@ function calculateRange(data, pageSize) {
  */
 function sliceData(data, currentPage, pageSize) {
   return data.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+}
+
+usePagination.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  currentPage: PropTypes.number.isRequired,
+  pageSize: PropTypes.number.isRequired,
+  ordering: PropTypes.object.isRequired,
 }

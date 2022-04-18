@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types'
 
 /**
  * Custom hook used to sort the data
@@ -17,4 +18,9 @@ export function useOrdering(data, ordering) {
   }, [orderedData, data, ordering]);
 
   return orderedData;
+}
+
+useOrdering.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  ordering: PropTypes.object,
 }

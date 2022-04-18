@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types'
 
 /**
  * Custom hook used to filter the array
@@ -16,4 +17,9 @@ export function useSearch(data, searchString) {
   }, [data, searchString]);
 
   return filteredData;
+}
+
+useSearch.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  searchString: PropTypes.string.isRequired,
 }
