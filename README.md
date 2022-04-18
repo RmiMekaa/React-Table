@@ -90,7 +90,7 @@ Render:
   - The data you want to display in the table.
   - To ensure a good behavior, make sure that each object have the same properties structure.
   
-- `headers : {Array<Objects>}`
+- `headers : {Array<Objects>}`  
   - Required
   - Handle table columns headers.
   - Each object must contain two properties:
@@ -98,26 +98,32 @@ Render:
     - key : A string which refers to the corresponding property name. 
   - The items in this array must follow the same order as the data objects properties. 
 
-- `pageSizeOptions : {Array<Numbers>}` 
+- `pageSizeOptions : {Array<Numbers>}`  
+  - Optional
   - Default: [10, 25, 50]
   - Providing options to configure the number of rows per page.
 
-- `defaultSorting : {Object}`
-  - Default: No sorting
+- `defaultSorting : {Object}`  
+  - Optional
+  - Default: undefined (No sorting)
   - Provide default sorting settings
   - The object must contains two properties:
-    - property : The property you want to sort by. (Exemple: "firstName")
+    - property : The property you want to sort by
     - order : The sorting order, must be 'ascending' or 'descending'
+  - Example : { property : "firstName", order: "ascending" }
 
 - `displayEntries : {Boolean}`  
+  - Optional
   - Default: true
   - Disable entries displayer feature by setting it to false
 
 - `allowSearch : {Boolean}`
+  - Optional
   - Default: true
   - Disable search feature by setting it to false
 
 - `selectPageSize : {Boolean}`
+  - Optional
   - Default: true
   - Disable page size selector feature by setting it to false
 
