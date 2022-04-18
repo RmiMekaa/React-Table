@@ -15,8 +15,7 @@ import PropTypes from 'prop-types';
 export function Table({ headers, slice, ordering, setOrdering }) {
   return (
     <div className='table'>
-      <table>
-        <caption className="sr-only">Data table</caption>
+      <table aria-label='data table'>
         <TableHeader {...{ headers, ordering, setOrdering }} />
         <TableBody {...{ slice }} />
       </table>
