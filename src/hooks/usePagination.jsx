@@ -16,12 +16,12 @@ export function usePagination(data, currentPage, pageSize, ordering) {
     const range = calculateRange(data, pageSize);
     setTableRange([...range]);
 
-    const slice = sliceData(data, currentPage, pageSize);
-    setSlice([...slice]);
+    const calculatedSlice = sliceData(data, currentPage, pageSize);
+    setSlice([...calculatedSlice]);
   }, [data, setTableRange, currentPage, setSlice, pageSize, ordering]);
 
   return { slice, range: tableRange };
-};
+}
 
 /**
  * Calculate the range of the table
@@ -36,7 +36,7 @@ function calculateRange(data, pageSize) {
     range.push(i);
   }
   return range;
-};
+}
 
 /**
  * Calculate the slice of data to display
@@ -47,4 +47,4 @@ function calculateRange(data, pageSize) {
  */
 function sliceData(data, currentPage, pageSize) {
   return data.slice((currentPage - 1) * pageSize, currentPage * pageSize);
-};
+}
