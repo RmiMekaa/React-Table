@@ -102,6 +102,13 @@ Render:
   - Default: [10, 25, 50]
   - Providing options to configure the number of rows per page.
 
+- `defaultSorting : {Object}`
+  - Default: No sorting
+  - Provide default sorting settings
+  - The object must contains two properties:
+    - property : The property you want to sort by. (Exemple: "firstName")
+    - order : The sorting order, must be 'ascending' or 'descending'
+
 - `displayEntries : {Boolean}`  
   - Default: true
   - Disable entries displayer feature by setting it to false
