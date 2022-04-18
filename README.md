@@ -22,7 +22,7 @@ npm i interactive-react-table
 
 ## Basic Usage Example
 
-Import ReactTable component:
+Import the component:
 ```
 import { default as ReactTable } from 'interactive-react-table';
 ```
@@ -88,7 +88,7 @@ Render:
 - `data: {Array<Objects>}`  
   - Required
   - The data you want to display in the table.
-  - To ensure a good behavior, make sure that each object have the same properties.
+  - To ensure a good behavior, make sure that each object have the same properties structure.
   
 - `headers : {Array<Objects>}`
   - Required
