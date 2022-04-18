@@ -9,13 +9,14 @@ import PropTypes from 'prop-types';
  * @param {Array.<Object>} props.headers Headers to config the table th
  * @param {Array.<Object>} props.slice A slice of data to display in the table
  * @param {Object} props.ordering Ordering state
- * @param {function} props.setOrdering Function to update ordering
+ * @param {Function} props.setOrdering Function to update ordering
  * @returns {React.ReactElement} 
  */
 export function Table({ headers, slice, ordering, setOrdering }) {
   return (
     <div className='table'>
       <table>
+        <caption className="sr-only">Data table</caption>
         <TableHeader {...{ headers, ordering, setOrdering }} />
         <TableBody {...{ slice }} />
       </table>
@@ -28,4 +29,5 @@ Table.propTypes = {
   slice: PropTypes.arrayOf(PropTypes.object).isRequired,
   ordering: PropTypes.object,
   setOrdering: PropTypes.func,
+  description: PropTypes.string,
 }
