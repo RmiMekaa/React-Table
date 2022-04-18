@@ -26,3 +26,13 @@ export function Header({ selectPageSize, pageSize, setPageSize, pageSizeOptions,
       ) : null
   )
 }
+
+Header.propTypes = {
+  selectPageSize: PropTypes.bool,
+  pageSize: PropTypes.number,
+  setPageSize: PropTypes.func,
+  pageSizeOptions: PropTypes.array,
+  searchString: PropTypes.string,
+  setSearchString: PropTypes.func,
+  allowSearch: PropTypes.bool,
+}
