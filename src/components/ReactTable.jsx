@@ -14,6 +14,7 @@ import '../style/style.css';
  * @param {Array.<object>} props.data Any data.
  * @param {Array.<object>} props.headers Each object must have two properties : a name to display and a key which refers to the corresponding data property exemple: [{name: First Name, key: firstName}]
  * @param {Array.<number>} [props.pageSizeOptions] An array providing options to configure the number of rows per page. Exemple: [25, 50, 100]
+ * @param {Object} [props.defaultSorting] Provide sorting default option. ex: { property: "firstName", order: "ascending"}
  * @param {boolean} [props.displayEntries] Disable entries displayer by setting it to false
  * @param {boolean} [props.allowSearch] Disable search input by setting it to false
  * @param {boolean} [props.selectPageSize] Disable select input by setting it to false
@@ -23,12 +24,13 @@ export default function ReactTable({
   data,
   headers,
   pageSizeOptions,
+  defaultSorting,
   displayEntries,
   allowSearch,
   selectPageSize,
 }) {
 
-  const [ordering, setOrdering] = useState(undefined)
+  const [ordering, setOrdering] = useState(defaultSorting)
   const [searchString, setSearchString] = useState("")
   const [pageSize, setPageSize] = useState(pageSizeOptions[0])
   const [currentPage, setCurrentPage] = useState(1);
@@ -54,6 +56,7 @@ ReactTable.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   headers: PropTypes.arrayOf(PropTypes.object).isRequired,
   pageSizeOptions: PropTypes.arrayOf(PropTypes.number),
+  defaultSorting: PropTypes.object,
   displayEntries: PropTypes.bool,
   allowSearch: PropTypes.bool,
   selectPageSize: PropTypes.bool
@@ -61,6 +64,7 @@ ReactTable.propTypes = {
 
 ReactTable.defaultProps = {
   pageSizeOptions: [10, 25, 50, 100],
+  defaultSorting: undefined,
   displayEntries: true,
   allowSearch: true,
   selectPageSize: true
