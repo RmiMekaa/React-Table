@@ -43,13 +43,15 @@ export default function ReactTable({
     <div className='mainContainer'>
       <Header {...{ selectPageSize, pageSize, setPageSize, pageSizeOptions, searchString, setSearchString, allowSearch }} />
       <Table {...{ headers, slice, ordering, setOrdering }} />
-      {(orderedData.length === 0)
-        ? <span className='noDataMsg'>
-          {data.length === 0 ? "No data" : "No data found for \"" + searchString + "\""}
-        </span>
+      {orderedData.length === 0
+        ? <span className='noDataMsg'>{noDataMsg(data, searchString)}</span>
         : <Footer {...{ range, slice, setCurrentPage, currentPage, filteredData, pageSize, displayEntries }} />}
     </div>
   )
+}
+
+const noDataMsg = (data, searchString) => {
+  return data.length === 0 ? "No data" : 'No data found for "' + searchString + '"'
 }
 
 ReactTable.propTypes = {
