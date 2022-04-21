@@ -25,7 +25,7 @@ export function usePagination(data, currentPage, pageSize, ordering) {
 }
 
 /**
- * Calculate the range of the table
+ * Calculate the range of the table (number of pages necessary)
  * @param {Array.<Object>} data Global Data
  * @param {Number} pageSize Page size
  * @returns {Array} An array containing page numbers
