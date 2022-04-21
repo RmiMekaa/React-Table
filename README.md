@@ -15,6 +15,7 @@ Prerequisites: [React](https://fr.reactjs.org/)
 ```
 npm i interactive-react-table
 ```
+-----------------
 
 ## Basic Usage Example
 
@@ -77,6 +78,8 @@ Use component:
 Render:  
 <img src='img/basicExample.jpg' alt='basic example' />
 
+-----------------
+
 ## Props
 
 - `data: {Array<Objects>}`  
@@ -120,6 +123,8 @@ Render:
   - Optional
   - Default: true
   - Disable page size selector feature by setting it to false
+
+-----------------
 
 ## Customize Style
 
