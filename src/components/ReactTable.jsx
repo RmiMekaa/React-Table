@@ -50,6 +50,12 @@ export default function ReactTable({
   )
 }
 
+/**
+ * Config no data message
+ * @param {Array} data the data
+ * @param {String} searchString The searchstring
+ * @return {String}
+ */
 const noDataMsg = (data, searchString) => {
   return data.length === 0 ? "No data" : 'No data found for "' + searchString + '"'
 }
