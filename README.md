@@ -9,16 +9,12 @@ A react component to easily create an interactive table.
 - Entries counter
 - Responsive design
 
------------------
-
 ## Installation
 
 Prerequisites: [React](https://fr.reactjs.org/)
 ```
 npm i interactive-react-table
 ```
-
------------------
 
 ## Basic Usage Example
 
@@ -81,8 +77,6 @@ Use component:
 Render:  
 <img src='img/basicExample.jpg' alt='basic example' />
 
------------------
-
 ## Props
 
 - `data: {Array<Objects>}`  
@@ -127,8 +121,6 @@ Render:
   - Default: true
   - Disable page size selector feature by setting it to false
 
------------------
-
 ## Customize Style
 
 Just write some styles for class `.mainContainer` . Your styles will be prioritized over library styles, then target the following selectors to customize what you want.
@@ -162,10 +154,7 @@ Just write some styles for class `.mainContainer` . Your styles will be prioriti
 
 Hope it helps !
 
------------------
-
 <p float='left'>
-  <img alt='Git' title='Git' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' width='32px'/>
   <img alt='CSS3' title='CSS3' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' width='32px'/>
   <img alt='JavaScript' title='JavaScript' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg' width='32px'/>
   <img alt='React' title='React' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' width='32px'/>
