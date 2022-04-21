@@ -12,12 +12,22 @@ export function useOrdering(data, ordering) {
 
   useEffect(() => {
     if (!ordering) return setOrderedData(data);
-    (ordering.order === 'ascending')
-      ? setOrderedData(data.sort((a, b) => (a[ordering.property] > b[ordering.property]) ? 1 : -1))
-      : setOrderedData(data.sort((a, b) => (a[ordering.property] > b[ordering.property]) ? -1 : 1))
+    setOrderedData(sortData(data, ordering))
   }, [orderedData, data, ordering]);
 
   return orderedData;
+}
+
+/**
+ * Sort the data
+ * @param {Array.<Object>} data The data to sort
+ * @param {Object} ordering The ordering config. Example: { order: "ascending", property: "firstName" }
+ * @returns {Array}
+ */
+function sortData(data, ordering) {
+  return (ordering.order === 'ascending')
+    ? data.sort((a, b) => (a[ordering.property] > b[ordering.property]) ? 1 : -1)
+    : data.sort((a, b) => (a[ordering.property] > b[ordering.property]) ? -1 : 1)
 }
 
 useOrdering.propTypes = {
