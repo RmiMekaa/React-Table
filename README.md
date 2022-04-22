@@ -1,6 +1,7 @@
 # React Table
 
 A react component to easily create an interactive table.
+See full documentation [here](https://rmimekaa.github.io/React-Table/)
 
 #### Features
 - Column sorting
@@ -156,16 +157,6 @@ Just write some styles for class `.mainContainer` . Your styles will be prioriti
 #### Example:
 
 <img src='img/customStyleExample.jpg' alt='custom style example' />
-
-## Sonar Cloud Metrics
-
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=RmiMekaa_React-Table&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=RmiMekaa_React-Table)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=RmiMekaa_React-Table&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=RmiMekaa_React-Table)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=RmiMekaa_React-Table&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=RmiMekaa_React-Table)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=RmiMekaa_React-Table&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=RmiMekaa_React-Table)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=RmiMekaa_React-Table&metric=bugs)](https://sonarcloud.io/summary/new_code?id=RmiMekaa_React-Table)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=RmiMekaa_React-Table&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=RmiMekaa_React-Table)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=RmiMekaa_React-Table&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=RmiMekaa_React-Table)
 
 Hope it helps !
 
