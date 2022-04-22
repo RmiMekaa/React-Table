@@ -85,7 +85,7 @@ Use component:
 ```
 
 Render:  
-<img src='img/basicExample.jpg' alt='basic example' />
+<img src='https://github.com/RmiMekaa/React-Table/blob/master/img/basicExample.jpg' alt='basic example' />
 
 -----------------
 
@@ -164,7 +164,7 @@ Just write some styles for class `.mainContainer` . Your styles will be prioriti
 
 #### Example:
 
-<img src='img/customStyleExample.jpg' alt='custom style example' />
+<img src='https://github.com/RmiMekaa/React-Table/blob/master/img/customStyleExample.jpg' alt='custom style example' />
 
 See full documentation [here](https://rmimekaa.github.io/React-Table/)  
 Hope it helps !
